@@ -1,23 +1,32 @@
-:root {
-  --color-blue: #00acdc;
-}
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-stretch: normal;
   font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
 }
 
+/* CSS Variables */
+:root {
+  --color-blue: #00acdc;
+}
+
+/* Base box-sizing reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Header styles */
 .header {
   width: 100%;
   display: flex;
@@ -25,10 +34,12 @@ body {
   justify-content: space-between;
 }
 
+/* Logo */
 .logo {
   margin-left: 50px;
 }
 
+/* Navigation */
 .nav {
   margin-right: 50px;
   padding: 0;
@@ -38,9 +49,11 @@ body {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
-.nav__item {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
@@ -53,6 +66,7 @@ body {
   color: #000;
   position: relative;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
 .nav__link:hover {
