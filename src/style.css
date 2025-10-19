@@ -20,12 +20,6 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 /* Header styles */
 .header {
   width: 100%;
